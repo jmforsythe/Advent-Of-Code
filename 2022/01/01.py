@@ -7,9 +7,7 @@ def adjust_top(c, f, s, t):
     o = sorted([c,f,s,t])[::-1]
     return o[:-1]
 
-    
-
-with open("1.dat") as f:
+with open("input.txt") as f:
     for l in f:
         line = l.rstrip()
         if line == "":
