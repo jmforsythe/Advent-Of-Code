@@ -1,0 +1,2 @@
+print(sum(int([c for c in l if c.isdigit()][0])*10 + int([c for c in l if c.isdigit()][-1]) for l in open("input.txt").readlines()))
+print(sum(int([c for c in m if c.isdigit()][0])*10 + int([c for c in m if c.isdigit()][-1]) for m in ((lambda s: s.replace("one", "o1e").replace("one", "o1e").replace("two", "t2o").replace("three", "t3e").replace("four", "f4r").replace("five","f5e").replace("six","s6x").replace("seven","s7n").replace("eight","e8t").replace("nine","n9e"))(l) for l in open("input.txt").readlines())))
