@@ -7,8 +7,10 @@ for i, row in enumerate(grid):
 n = None
 i = p[0]
 j = p[1]
-if i>0 and grid[i-1][j] in ("|", "7", "F"):
+S_VERTICAL = False
+if i > 0 and grid[i-1][j] in ("|", "7", "F"):
     n = (i-1, j)
+    S_VERTICAL = True
 elif i < len(grid)-1 and grid[i+1][j] in ("|", "L", "J"):
     n = (i+1, j)
 elif j > 0 and grid[i][j-1] in ("-", "L", "F"):
@@ -53,3 +55,17 @@ while (nc:=grid[n[0]][n[1]]) != "S":
             case "F": p, n = down(n)
     loop.add(p)
 print((len(loop)+1)//2)
+
+from math import lcm
+
+num_inside = 0
+for i, row in enumerate(grid):
+    inside = False
+    for j, c in enumerate(row):
+        if (i, j) in loop:
+            if c in ["|", "L", "J"] or (S_VERTICAL and c == "S"):
+                inside = not inside
+            continue
+        if inside:
+            num_inside += 1
+print(num_inside)
