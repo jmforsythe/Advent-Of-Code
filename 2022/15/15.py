@@ -57,7 +57,7 @@ def in_areas(x, areas):
 
 
 def main():
-    lines = open("15.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
 
     sensors = []
     beacons = []

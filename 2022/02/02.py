@@ -51,7 +51,7 @@ def get_score2(a, b):
 score1 = 0
 score2 = 0
 
-with open("2.dat") as f:
+with open("input.txt") as f:
     for line in f:
         a, b = line.rstrip().split(" ")
         score1 += get_score1(a,b)

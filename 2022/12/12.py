@@ -105,7 +105,7 @@ def reset_graph(graph):
         reset_node(node)
 
 def main():
-    lines = open("12.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     # Flatten
     graph = [node for node_line in build_graph(lines) for node in node_line]
     start = find_start(graph)

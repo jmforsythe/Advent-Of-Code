@@ -10,7 +10,7 @@ def get_new_location(n, cur, val):
         return (x-1) % (n-1) + 1
 
 def main():
-    nums = [int(line) for line in open("20.dat").read().splitlines()]
+    nums = [int(line) for line in open("input.txt").read().splitlines()]
     n = len(nums)
     ptrs = [i for i in range(n)]
     for i in range(n):

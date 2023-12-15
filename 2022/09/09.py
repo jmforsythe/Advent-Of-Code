@@ -57,7 +57,7 @@ ptr = head
 for i in range(1,10):
     ptr = ptr.add_child(Knot(ptr, i))
 
-with open("9.dat") as f:
+with open("input.txt") as f:
     for line in f:
         a, b = line.rstrip().split()
         for _ in range(int(b)):

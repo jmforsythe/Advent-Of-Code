@@ -54,7 +54,7 @@ def make_op(operation):
     return f
 
 
-with open("11.dat") as f:
+with open("input.txt") as f:
     l = f.read().splitlines()
 
 monkeys = []

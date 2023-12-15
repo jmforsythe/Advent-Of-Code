@@ -69,7 +69,7 @@ def drop_grain2(board, yMax):
 def main():
     board = {}
 
-    lines = open("14.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     paths = [line.split(" -> ") for line in lines]
     for path in paths:
         c = [list(map(int, coords.split(","))) for coords in path]

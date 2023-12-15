@@ -86,7 +86,7 @@ dir_symbol = {
 }
 
 def main(get_dest):
-    lines = open("22.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     board = [[c for c in line] for line in lines[:-1]]
     instructions = []
     if lines[-1][0] in ("L","R"):

@@ -32,7 +32,7 @@ def compare(left, right):
             return 0
 
 def main():
-    lines = open("13.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     packets = [eval(line) for line in lines if line != ""]
     pairs = [[packets[i], packets[i+1]] for i in range(0, len(packets), 2)]
 

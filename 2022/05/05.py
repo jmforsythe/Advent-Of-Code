@@ -23,7 +23,7 @@ def move2(stacks, source, dest, num):
 
 top_dat = []
 
-with open("5.dat") as f:
+with open("input.txt") as f:
     for l in f:
         line = l.rstrip()
         if line == "":

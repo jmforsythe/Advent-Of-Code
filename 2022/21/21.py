@@ -3,7 +3,7 @@ import functools
 
 def main():
     text_dict = {}
-    for line in open("21.dat").read().splitlines():
+    for line in open("input.txt").read().splitlines():
         monkey, val = line.split(": ")
         text_dict[monkey] = val
 
@@ -45,7 +45,7 @@ def search(func, max_pow):
 
 def main2():
     text_dict = {}
-    for line in open("21.dat").read().splitlines():
+    for line in open("input.txt").read().splitlines():
         monkey, val = line.split(": ")
         text_dict[monkey] = val
 

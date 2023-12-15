@@ -33,7 +33,7 @@ def to_SNAFU(num):
     return s[::-1]
 
 def main():
-    nums = [from_SNAFU(line) for line in open("25.dat").read().splitlines()]
+    nums = [from_SNAFU(line) for line in open("input.txt").read().splitlines()]
     print(to_SNAFU(sum(nums)))
 
 if __name__ == "__main__":

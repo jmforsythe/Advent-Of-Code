@@ -79,7 +79,7 @@ def write_rock(board, rock, cur_pos):
                 board[cur_pos[1]+y-i-1][cur_pos[0]+j] = "#"
 
 def main():
-    moves = open("17.dat").read().rstrip()
+    moves = open("input.txt").read().rstrip()
     #moves = ">>><<><>><<<>><>>><<<>>><<<><<<>><>><<>>"
 
     move_index = -1
@@ -124,7 +124,7 @@ def main():
     print(get_starting_pos(chamber)[1]-4)
 
 def main2():
-    moves = open("17.dat").read().rstrip()
+    moves = open("input.txt").read().rstrip()
     #moves = ">>><<><>><<<>><>>><<<>>><<<><<<>><>><<>>"
 
     move_index = -1

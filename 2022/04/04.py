@@ -3,7 +3,7 @@ def to_int(a,b,c,d):
 
 count = 0
 count2 = 0
-with open("4.dat") as f:
+with open("input.txt") as f:
     for l in f:
         line = l.rstrip()
         a, b = line.split(",")

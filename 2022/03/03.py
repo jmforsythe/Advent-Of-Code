@@ -28,7 +28,7 @@ def line_priority(l):
 s=0
 s2 = 0
 group_of_3 = []
-with open("3.dat") as f:
+with open("input.txt") as f:
     for l in f:
         s += line_priority(l)
         group_of_3.append(l.rstrip())

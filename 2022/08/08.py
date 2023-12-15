@@ -33,7 +33,7 @@ def get_scenic(i, j):
         p *= get_nearest_dir(i, j, d)
     return p
 
-lines = open("8.dat").read().splitlines()
+lines = open("input.txt").read().splitlines()
 
 s=0
 t=0

@@ -3,7 +3,7 @@ def get_sides(x,y,z):
 
 def main():
     cubes = set()
-    lines = open("18.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     for line in lines:
         x,y,z = (int(_) for _ in line.split(","))
         cubes.add((x,y,z))

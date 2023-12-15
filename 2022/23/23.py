@@ -55,7 +55,7 @@ def print_elves(elves):
 
 def main():
     elves = set()
-    lines = open("23.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     for i in range(len(lines)):
         for j in range(len(lines[i])):
             if lines[i][j] == "#":

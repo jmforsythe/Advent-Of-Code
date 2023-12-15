@@ -29,7 +29,7 @@ none_dir = Directory(None, None)
 cur_dir = none_dir
 none_dir.add_child_dir("/")
 
-lines = open("7.dat").read().splitlines()
+lines = open("input.txt").read().splitlines()
 for line in lines:
     if line[0] == "$":
         if line[2:4] == "cd":

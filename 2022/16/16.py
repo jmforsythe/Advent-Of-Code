@@ -12,7 +12,7 @@ def id(name):
 
 def main():
     regex = re.compile(r"Valve (.*) has.*=(\d+);.*ves? (.*)")
-    lines = open("16.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     flows = [0 for i in range(len(lines))]
     adjacency_matrix = [[0 for i in range(len(lines))] for j in range(len(lines))]
     for line in lines:

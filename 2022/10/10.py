@@ -3,7 +3,7 @@ reg = 1
 sigs = []
 pixels = ["." for i in range(240)]
 
-with open("10.dat") as f:
+with open("input.txt") as f:
     for line in f:
         a = line.rstrip().split()
         ins = a[0]

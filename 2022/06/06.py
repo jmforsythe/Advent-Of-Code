@@ -1,4 +1,4 @@
-with open("6.dat") as f:
+with open("input.txt") as f:
     data = f.read()
 
 def do_thing(data, num):

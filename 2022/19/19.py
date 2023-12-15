@@ -78,7 +78,7 @@ def main():
     regex = re.compile(r".* (\d+):.* (\d+) .* (\d+) .* (\d+) .* (\d+) .* (\d+) .* (\d+) .*")
 
     blueprints = []
-    lines = open("19.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     for line in lines:
         m = regex.match(line)
         blueprints.append(m.groups())

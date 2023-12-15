@@ -9,7 +9,7 @@ dir_to_sym = {
 sym_to_dir = {dir_to_sym[key] : key for key in dir_to_sym}
 
 def read_input():
-    lines = open("24.dat").read().splitlines()
+    lines = open("input.txt").read().splitlines()
     blizzards, walls = set(), set()
     for i in range(len(lines)):
         for j in range(len(lines[i])):
