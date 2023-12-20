@@ -7,7 +7,7 @@ CURRENT_TIME = datetime.datetime.utcnow() + datetime.timedelta(hours=-5)
 EARLIEST_YEAR = 2015
 
 # Time in seconds to wait between requests to avoid spamming servers
-TIME_BETWEEN_REQUESTS = 5
+TIME_BETWEEN_REQUESTS = 0.5
 
 def get_input(year, day):
     res = s.get(f"https://adventofcode.com/{year}/day/{day}/input")
@@ -37,10 +37,11 @@ def get_day(year, day):
 
     with open(input_path, "w") as f:
         print(f"Downloading {input_path}")
-        time.sleep(5)
         res = get_input(year, day)
         if res.ok:
             f.write(res.content.decode())
+
+    time.sleep(TIME_BETWEEN_REQUESTS)
 
 if __name__ == "__main__":
     s = requests.session()
