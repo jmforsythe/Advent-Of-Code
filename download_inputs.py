@@ -35,10 +35,11 @@ def get_day(year, day):
     if os.path.isfile(input_path):
         return
 
-    with open(input_path, "w") as f:
-        print(f"Downloading {input_path}")
-        res = get_input(year, day)
-        if res.ok:
+    print(f"Downloading {input_path}")
+    res = get_input(year, day)
+    if res.ok:
+        with open(input_path, "w") as f:
+            print(f"Writing {input_path}")
             f.write(res.content.decode())
 
     time.sleep(TIME_BETWEEN_REQUESTS)
