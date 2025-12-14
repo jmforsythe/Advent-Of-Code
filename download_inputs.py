@@ -3,8 +3,13 @@ import os
 import datetime
 import time
 
-CURRENT_TIME = datetime.datetime.utcnow() + datetime.timedelta(hours=-5)
+CURRENT_TIME = datetime.datetime.now(datetime.UTC) + datetime.timedelta(hours=-5)
 EARLIEST_YEAR = 2015
+def last_day_for_year(year):
+    if year<2025:
+        return 25
+    else:
+        return 12
 
 # Time in seconds to wait between requests to avoid spamming servers
 TIME_BETWEEN_REQUESTS = 0.5
@@ -23,7 +28,7 @@ def get_prev_years():
 def get_whole_year(year):
     if not os.path.isdir(str(year)):
         os.makedirs(str(year))
-    for day in range(1, 25+1):
+    for day in range(1, last_day_for_year(year)+1):
         get_day(year, day)
 
 def get_day(year, day):
@@ -59,7 +64,7 @@ if __name__ == "__main__":
         get_whole_year(year)
 
     if CURRENT_TIME.month == 12:
-        if not os.path.isdir(str(year)):
-            os.makedirs(str(year))
-        for day in range(1, min(25, CURRENT_TIME.day)+1):
+        if not os.path.isdir(str(CURRENT_TIME.year)):
+            os.makedirs(str(CURRENT_TIME.year))
+        for day in range(1, min(last_day_for_year(CURRENT_TIME.year), CURRENT_TIME.day)+1):
             get_day(CURRENT_TIME.year, day)
